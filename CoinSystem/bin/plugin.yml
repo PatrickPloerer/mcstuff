@@ -1,0 +1,10 @@
+name: CoinSystem
+version: 1.6
+author: Padel
+main: de.padel.coinsys.main.Main
+commands:
+  coins:
+  setLottery:
+  setVillager:
+  setShop:
+  

@@ -1,0 +1,121 @@
+#
+#   ______        ________        __  _____
+#  / ___\ \      / / __ ) \      / / |_   _| __ __ _(_)_ __ (_)_ __   __ _
+# | |    \ \ /\ / /|  _ \\ \ /\ / /    | || '__/ _` | | '_ \| | '_ \ / _` |
+# | |___  \ V  V / | |_) |\ V  V /     | || | | (_| | | | | | | | | | (_| |
+# \____|  \_/\_/  |____/  \_/\_/      |_||_|  \__,_|_|_| |_|_|_| |_|\__, |
+#                                                                   |___/
+#                                                               by bote100
+
+general:
+  playersPerTeam: 1 # Rundengroesse
+  minPlayers: 2 # Wie viele Spieler müssen mindestens mitspielen
+  roundAmount: 3 # Diese Zahl MUSS UNGERADE sein!
+  prefix: "%>% &eCWTraining &7|"
+  noRights: "&cKein Recht!"
+  cloudnet: true # Soll der CloudNET Support aktiviert sein, WENN CloudNET installiert ist?
+  mysql:
+    host: "localhost"
+    user: "root"
+    database: "cwtraining"
+    password: "safePassword"
+lobby:
+  countdown: 30 # Ab wo soll der Countdown starten?
+  earlycount: true # Soll der Countdown auf einen niedrigen Wert gesetzt werden, wenn der Server voll ist
+  earlyvalue: 5 # Falls voll oder Forcestart, auf welchen Wert?
+  alertBegin: "{prefix} &7Die Runde startet in &a{0} Sekunden&7!"
+  alertStart: "{prefix} &aDie Runde beginnt jetzt!"
+  cancel: "{prefix} &cDer Countdown wurde abgebrochen!"
+  join: "{prefix} &7{0} &7hat das Spiel &abetreten&7."
+  quit: "{prefix} &7{0} &7hat das Spiel &cverlassen&7."
+  statsRotation: "NORTH"
+  item:
+    team: "&7%|% &e&lTeam%ue%bersicht &7%|%" # %|% wird zu einem durchgezogenen Strich
+    leave: "&7%|% &c&lZur%ue%ck zur Lobby &7%|%"
+  teams:
+    blue: "&9Team Blau"
+    blueColor: "&9"
+    red: "&cTeam Rot"
+    redColor: "&c"
+    alreadyIn: "{prefix} &cDu bist bereits in diesem Team!"
+    full: "{prefix} &cDieses Team ist bereits voll!"
+    entered: "{prefix} &7Du bist {0}{1} &7beigetreten!"
+ingame:
+  lenght: 240 # Laenge in Sekunden. 4 * 60 Sekunden = 240 Sekunden
+  timeRemaining: "&7Es verbleiben %>% &e{0}m {1}s"
+  prefix:
+    att: "&eATT &8%|% &e"
+    def: "&aDEF &8%|% &a"
+  title:
+    attacker:
+      caption: "&e&lAngreifer"
+      subtitle: "&7Zerst%oe%re das gegnerische Bett!"
+    defender:
+      caption: "&a&lVerteidiger"
+      subtitle: "&7Verteidige das Bett!"
+  winRound: "{prefix} {0}{1} &7hat diese Spielrunde gewonnen!"
+  noResultDef: "{prefix} &7Es kam zu keinem Ergebnis! Die &aVerteidiger &7gewinnen."
+  noResultAtt: "{prefix} &7Es kam zu keinem Ergebnis! Die &eAngreifer &7gewinnen."
+  bed:
+    title: "&c&lBett"
+    subtitle: "&cder Verteidiger wurde zerst%oe%rt"
+  death: "{prefix} {0}{1} &7ist gestorben!"
+  deathByPlayer: "{prefix} {0}{1} &7wurde von {2}{3} &7get%oe%tet!"
+  respawn: "{prefix} &7Du wurdest wiederbelebt, da dein Bett noch steht."
+  specTitle: "&b&lSpectator"
+  specSubtitle: "&7Du spielst gleich weiter."
+  specJoin: "{prefix} &7Du bist nun Spectator."
+  chat:
+    global: "&7[&eALL&7] {0}{1}&8: &7{2}"
+    team: "{0}{1}&8: &7{2}"
+    spec: "&7[&4SPEC&7] &7{0}&8: &7{1}"
+    lobby: "&7{0}&8: &7{1}"
+  shopName: "&a&lShop"
+restart:
+  winmessage: "{prefix} {0}{1} &7hat CWBW-Training gewonnen."
+  restart: "{prefix} &cDer Server startet in {0} Sekunden neu!"
+  restartNow: "{prefix} &cDer Server startet jetzt neu!"
+  stopServer: false # false = bei BungeeCord Servern , true = Clouds
+  teleportToLobby: true # Sollen die Spieler + Specs zurück in die Wartelobby teleportiert werden
+command:
+  start:
+    success: "{prefix} &aDu hast den Countdown verk%ue%rzt."
+    error: "{prefix} &cDu kannst jetzt nicht forcestarten."
+  stats:
+    header: "&7-= &e{0}'s Stats &7=-"
+    entry: "&7{0}: &e{1}"
+    notInDatabase: "{prefix} &cDieser Spieler wurde nicht in unserer Datenbank gefunden!"
+# "%>%" wird zu "»"
+scoreboard:
+  caption: "&e&lCWBW&f&lTraining"
+  lobby:
+    - "&c" # Placeholder
+    - "&fSpielmodus:"
+    - "&7%>% &eCWBW-Training"
+    - "&e" # Placeholder
+    - "&fDeine Platzierung:"
+    - "&7%>% &e#%RANK%"
+    - "&b" # Placeholder
+    - "&fTeamSpeak:"
+    - "&7%>% &ebote100.eu"
+  ingame:
+      player:
+        - "&c" # Placeholder
+        - "&fDeine Rolle:"
+        - "&7%>% &e%ROLE%"
+        - "&e" # Placeholder
+        - "&fSpielrunde:"
+        - "&7%>% &e%GAME_NOW% / %GAME_VAL%"
+        - "&5" # Placeholder
+        - "&fPunkte:"
+        - "&7%>% &e%POINTS%"
+        - "&b" # Placeholder
+        - "&fTeamSpeak:"
+        - "&7%>% &ebote100.eu"
+      spec:
+        - "&e" # Placeholder
+        - "&fSpielrunde:"
+        - "&7%>% &e%GAME_NOW% / %GAME_VAL%"
+        - "&b" # Placeholder
+        - "&fTeamSpeak:"
+        - "&7%>% &ebote100.eu"

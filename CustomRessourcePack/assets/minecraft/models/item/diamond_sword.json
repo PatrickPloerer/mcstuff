@@ -1,0 +1,14 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/diamond_sword"
+	},
+	"overrides": [
+		{ "predicate": {"custom_model_data":7}, "model": "item/usp"},
+		{ "predicate": {"custom_model_data":8}, "model": "item/deagel"},
+		{ "predicate": {"custom_model_data":9}, "model": "item/ak"},
+		{ "predicate": {"custom_model_data":10}, "model": "item/m4"},
+		{ "predicate": {"custom_model_data":11}, "model": "item/rl"}
+		
+	]
+}

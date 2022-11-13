@@ -1,0 +1,9 @@
+name: SpeedCW
+author: Padel
+version: 1.0
+main: de.padel.speedCW.SpeedCW
+commands:
+  setup:
+  build:
+  stats:
+  

@@ -1,0 +1,14 @@
+name: BuildFFA
+version: 1.0.5
+main: de.padel.buildffa.main.Main
+author: Padel
+commands:
+  setname:
+  setspawn:
+  build:
+  setheight:
+  stats:
+  teaming:
+  bffa:
+  setranglist:
+  

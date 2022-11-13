@@ -1,0 +1,4 @@
+name: ItemSystem
+author: Padel
+version: 1.0
+main: de.padel.itemsystem.main.Main
